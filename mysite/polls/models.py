@@ -13,8 +13,8 @@ class Question(models.Model):
     def __str__(self):
         return f"ID: {self.pk} - Text: {self.question_text}"
 
-    def was_published_recenty(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(day=1)
+    def was_published_recently(self):
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
 
 
